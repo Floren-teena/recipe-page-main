@@ -5,6 +5,7 @@
 
 body {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -48,17 +49,23 @@ body {
 .prep-time li::marker {
   color: hsl(332, 51%, 32%);
 }
-.prep-time span, .instructions span {
+.prep-time span,
+.instructions span {
   font-weight: 700;
 }
-.prep-time li, .ingredients li, .instructions li {
+.prep-time li,
+.ingredients li,
+.instructions li {
   line-height: 30px;
 }
-.ingredients, .instructions {
+.ingredients,
+.instructions {
   margin-bottom: 25px;
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
-.ingredients h2, .instructions h2, .nutrition h2 {
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
   font-family: "Young Serif";
   font-weight: 400;
   color: hsl(14, 45%, 36%);
@@ -67,7 +74,8 @@ body {
   line-height: 25px;
   margin-bottom: 10px;
 }
-.instructions li::marker, .ingredients li::marker {
+.instructions li::marker,
+.ingredients li::marker {
   color: hsl(14, 45%, 36%);
   font-weight: 700;
 }
@@ -81,7 +89,7 @@ body {
 .nutrition-table tr {
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
-.nutrition-table .no-border{
+.nutrition-table .no-border {
   border-bottom: none;
 }
 .nutrition-table .left {
@@ -99,4 +107,37 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* ----------------------- Tablet Screen Size ------------------------ */
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .intro {
+    margin-bottom: 25px;
+  }
+  .intro h1 {
+    font-size: 30px;
+  }
+}
+
+/* -------------------------Desktop Screen Size ------------------ */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: hsl(30, 54%, 90%);
+    align-items: center;
+    margin: 50px;
+  }
+  .container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem 1.5rem;
+    border-radius: 10px;
+    max-width: 50%;
+  }
+  .recipe-image img {
+    border-radius: 10px;
+  }
 }
